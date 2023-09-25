@@ -32,4 +32,6 @@ mongoose.connect('mongodb://localhost/job_search_app', { useNewUrlParser: true, 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
->>>>>>> ee5a9df7185560fba13050011bea3ec075f70c8e
+
+const jobRoutes=require('./routes/jobRoutes');
+app.use('/api/jobs',jobRoutes);
